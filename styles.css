@@ -1,0 +1,248 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat&display=swap");
+
+/* Media Queries */
+
+/* When the screen in smaller than 800px */
+@media only screen and (max-width: 800px) {
+  /* Navbar */
+  .nav {
+    visibility: hidden;
+  }
+  .header-social {
+    visibility: hidden;
+  }
+  /* Story Page */
+  p.story-content {
+    font-size: 1em;
+  }
+  h1.page-title {
+    font-size: 3em;
+  }
+  /* Blend Page - Boxes */
+  h3.blend-name {
+    /* margin-top: 10px; */
+    font-size: 1.5em;
+  }
+  p.blend-description {
+    font-size: 0.7em;
+    padding: 0.5em;
+  }
+  div.blend-box {
+    flex-direction: column;
+  }
+  div.blend-box-item {
+    height: 150px;
+    width: 200px;
+  }
+  /* div.item-1,
+  .item-2,
+  .item-3 {
+    background-size: contain;
+  } */
+}
+/* When the screen is more than 800px */
+@media only screen and (min-width: 800px) {
+  .menu-wrap {
+    visibility: hidden;
+  }
+  .footer-social {
+    visibility: hidden;
+  }
+}
+
+/* General CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Colors */
+  --logoColor: #c0aea4;
+  --navbarColor: #26353e;
+  --socialColor: #b15f4d;
+  --socialhoverColor: #555c64;
+
+  /* Fonts */
+  --mainFont: "Montserrat", sans-serif;
+  --logofont: "Amatic SC", cursive;
+}
+
+/* Navbar & Header */
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100vw;
+  height: 100px;
+  background: var(--navbarColor);
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  margin-right: 10%;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin: 1em;
+  text-transform: uppercase;
+  color: #c0aea4;
+  font-family: var(--mainFont);
+}
+
+.nav-link:hover {
+  color: var(--socialColor);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--logofont);
+  font-size: 3em;
+  color: var(--logoColor);
+  margin: 10px;
+  text-decoration: none;
+}
+
+.fa-instagram,
+.fa-facebook-square {
+  display: flex;
+  align-content: center;
+  color: #b15f4d;
+  padding-right: 5px;
+}
+.fa-instagram:hover,
+.fa-facebook-square:hover {
+  color: #555c64;
+}
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.3)),
+    url(./beans-brown-coffee-34085.jpg) center/cover no-repeat fixed;
+  width: 100vw;
+  height: 95vh;
+}
+
+/* Main Body */
+
+.main-body {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: #b15f4d3d;
+}
+
+.page-title {
+  padding-top: 150px;
+  padding-bottom: 5%;
+  font-family: var(--logofont);
+  color: var(--logoColor);
+  text-shadow: 2px 5px 1px #26353e;
+  font-size: 6em;
+}
+
+/* Story Box */
+.story-content {
+  padding: 0px 10vw;
+  text-align: center;
+  font-family: var(--mainFont);
+  color: var(--logoColor);
+  font-size: 1.5em;
+}
+
+.content-box {
+  margin: 0px 10vw;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.212);
+  background: var(--socialhoverColor);
+}
+
+.content-title {
+  padding: 80px;
+}
+
+/* Blend Page Boxes */
+
+.blend-box {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.blend-box-item {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px 10px rgba(38, 38, 38, 0.6);
+}
+
+.item-1,
+.item-2,
+.item-3 {
+  background-size: contain;
+}
+
+.item-1 {
+  background: url(./Images/costarica.jpg);
+}
+.item-2 {
+  background: url(./Images/columbian.jpg);
+}
+.item-3 {
+  background: url(./Images/mexican.jpg);
+}
+
+.blend-box-item :not(img) {
+  opacity: 0;
+}
+.blend-box-item:hover :not(img) {
+  opacity: 14;
+}
+
+.blend-box-item:hover {
+  margin: 20px;
+  box-shadow: 0px 0px 10px 10px rgba(38, 38, 38, 0.6);
+  background: var(--logoColor);
+}
+
+.blend-name {
+  margin-top: 10px;
+  font-family: var(--logofont);
+  font-size: 2em;
+}
+
+.blend-description {
+  font-family: var(--mainFont);
+  padding: 20px;
+  margin-top: 10px;
+}
+
+/* Footer */
+
+.footer {
+  background: var(--navbarColor);
+  font-size: 0.8em;
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--socialhoverColor);
+  font-family: var(--mainFont);
+}
+
+.footer-social {
+  padding: 10px;
+}
