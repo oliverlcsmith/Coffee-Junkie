@@ -1,5 +1,6 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
 
 /* Media Queries */
 
@@ -69,6 +70,7 @@
   /* Fonts */
   --mainFont: "Montserrat", sans-serif;
   --logofont: "Amatic SC", cursive;
+  --titleFont: "Bebas Neue", cursive;
 }
 
 /* Navbar & Header */
@@ -149,6 +151,49 @@
   color: var(--logoColor);
   text-shadow: 2px 5px 1px #26353e;
   font-size: 6em;
+}
+
+.title-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-item {
+  color: var(--logoColor);
+  text-transform: uppercase;
+  font-family: var(--titleFont);
+  font-size: 80px;
+}
+
+.title-btn {
+  width: 15vw;
+  height: 5vh;
+  background: var(--socialColor);
+  border: none;
+  color: var(--logoColor);
+  font-size: 1.5em;
+  font-family: var(--titleFont);
+  cursor: pointer;
+}
+
+.fa-angle-down {
+  transform: rotate(270deg);
+}
+
+.title-btn-container:hover .title-btn {
+  background: var(--otherColor);
+  border: var(--otherColor);
+}
+.title-btn-container:hover .fa-angle-down {
+  transform: none;
+}
+
+.title-btn-link {
+  text-decoration: none;
+  margin-top: 1em;
 }
 
 /* Story Box */
